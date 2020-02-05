@@ -1,0 +1,25 @@
+form
+  label,
+  input
+    display: block
+
+  label
+    font-weight: bold
+    .sr-only
+      display: none
+  
+  input
+    border-radius: 5px
+    border: none
+    color: $textColor !important
+    padding: 0.5em
+    width: 100%
+    &[type="text"],
+    &[type="email"]
+      margin-bottom: 1em
+    &:focus
+      outline: none
+
+  select
+    color: $textColor !important
+    width: 100%

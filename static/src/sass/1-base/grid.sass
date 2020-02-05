@@ -1,0 +1,90 @@
+.container
+    margin: 0 auto
+
+.row
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+.col
+    width: 100%
+.col, 
+[class*="col"]
+    padding: 0 2rem
+
+
+@media($mobileS)
+    .container
+        width: 300px
+    .col-xs-12
+        width: 100%
+@media($mobileL)
+    .container
+        width: 380px
+@media($tablet)
+    .container
+        width: 700px
+@media($laptop)
+    .container
+        width: 980px
+    .row
+        flex-direction: row
+
+    .col
+        padding: 0 2rem
+
+    .col-lg-1
+        flex-basis: 8.3334%
+        max-width: 8.3334%
+
+    .col-lg-2
+        flex-basis: 16.6667%
+        max-width: 16.6667%
+
+    .col-lg-3
+        flex-basis: 25%
+        max-width: 25%
+
+    .col-lg-4
+        flex-basis: 33.3334%
+        max-width: 33.3334%
+    
+    .col-lg-5
+        flex-basis: 41.6667%
+        max-width: 41.6667%
+
+    .col-lg-6
+        flex-basis: 50%
+        max-width: 50%
+
+    .col-lg-7
+        flex-basis: 58.31%
+        max-width: 58.31%
+
+    .col-lg-8
+        flex-basis: 66.6667%
+        max-width: 66.6667%
+
+    .col-lg-10
+        flex-basis: 83.3333%
+        max-width: 83.3333%
+
+    .col-lg-12
+        flex-basis: 100%
+        max-width: 100%
+@media($laptopM)
+    .container
+        width: 1250px    
+
+
+/**
+ * GRID
+ */
+.grid
+    display: grid
+    grid-gap: 1rem
+
+    &-6-6
+        grid-template-columns: 1fr 1fr
+
+    &-4-4-4
+        grid-template-columns: 1fr 1fr 1fr

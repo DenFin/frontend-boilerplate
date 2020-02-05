@@ -1,0 +1,70 @@
+// UTILITIES
+.reset-margin
+    margin: 0 !important
+
+.panel
+    padding: $margin 0
+
+    p:last-of-type
+        margin: 0
+    p:first-of-type
+        margin-bottom: 2rem
+
+.full-height
+    min-height: 100vh
+    align-items: center
+
+
+
+// BOX ALIGNMENT
+.justify-space-between
+    display: flex
+    justify-content: space-between
+
+.justify-content-end
+    justify-content: flex-end
+
+.center-vertically
+    display: flex
+    align-items: center
+
+.center-horizontally
+    display: flex
+    flex-direction: column
+    align-items: center
+
+// TEXT ALIGNMENT
+.text-center
+    text-align: center
+
+
+.tablet-only
+    display: none
+.desktop-only
+    display: none
+
+@media($tablet) and (max-width: 1023px)
+  .mobile-only
+      display: none !important
+
+  .tablet-only
+      display: block
+
+@media($laptop)
+    .mobile-only
+        display: none !important
+    .desktop-only
+        display: block
+    .panel
+        padding: 4rem 0
+    .flex-container
+        display: flex
+
+@media($laptopL)
+    .panel
+        padding: 8rem 0
+
+.two-column
+    column-count: 2
+    column-gap: 2rem
+    padding: 0 !important

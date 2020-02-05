@@ -1,0 +1,50 @@
+{
+  "name": "moglicodes.de",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --colors --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MogliCodes/moglicodes.de.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MogliCodes/moglicodes.de/issues"
+  },
+  "homepage": "https://github.com/MogliCodes/moglicodes.de#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.1.10",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^2.0.0",
+    "imports-loader": "^0.8.0",
+    "node-sass": "^4.9.3",
+    "postcss-cli": "^6.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^7.1.0",
+    "sugarss": "^2.0.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
