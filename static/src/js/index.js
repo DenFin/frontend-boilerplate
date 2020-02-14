@@ -1,7 +1,10 @@
-import ScrollMagic from './vendor/scrollmagic/ScrollMagic.min'
+import navigation from './modules/navigation';
+import smoothScroll from './modules/smoothScroll';
+import scrollEvents from './modules/scrollEvents';
 
-import navigation from './modules/navigation'
-import scrollEvents from './modules/scrollEvents'
 
-navigation();
-scrollEvents();
+(function(){
+  navigation();
+  smoothScroll();
+  scrollEvents();
+})();

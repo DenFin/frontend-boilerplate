@@ -45,6 +45,8 @@
     ]
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.4.1",
+    "gsap": "^1.19.1",
+    "scrollmagic": "^2.0.5"
   }
 }

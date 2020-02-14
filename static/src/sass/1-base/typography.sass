@@ -16,6 +16,7 @@ h1, h2, h3, h4, h5, h6
 h1
   font:
     family: $secondaryFont
+  line-height: 1.2
 
 h1,h2,h3,h4,h5,h6,hgroup,
 ul,ol,dd,
@@ -48,3 +49,15 @@ pre,table,fieldset,hr
     font-size: 2.8rem
   h4
     font-size: 1.8rem
+
+@media($desktop)
+  h1
+    font-size: 5.4rem
+
+@media($desktopL)
+  h1
+    font-size: 8.4rem
+    margin-bottom: $margin-2
+
+  .work-break-desktop-l
+    display: block

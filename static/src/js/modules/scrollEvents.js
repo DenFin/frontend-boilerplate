@@ -1,12 +1,11 @@
-import ScrollMagic from './../vendor/scrollmagic/ScrollMagic.min'
+import ScrollMagic from 'ScrollMagic'
+import 'animation.gsap'
+import 'debug.addIndicators'
 import $ from  'jquery'
 
 export default function() {
 
-
-
   var controller = new ScrollMagic.Controller();
-
 
   new ScrollMagic.Scene({
       triggerElement: "#stick-1",
@@ -14,10 +13,8 @@ export default function() {
       offset: 50 // start this scene after scrolling for 50px
   })
       .setPin('#stick-1')
-      // .addIndicators()
+      .addIndicators()
       .addTo(controller); // assign the scene to the controller
-
-
 
   new ScrollMagic.Scene({
       triggerElement: "#stick-2",
@@ -25,10 +22,8 @@ export default function() {
       offset: 50 // start this scene after scrolling for 50px
   })
     .setPin('#stick-2')
-    // .addIndicators()
+    .addIndicators()
     .addTo(controller); // assign the scene to the controller
-
-
 
   new ScrollMagic.Scene({
       triggerElement: "#stick-3",
@@ -36,21 +31,7 @@ export default function() {
       offset: 50 // start this scene after scrolling for 50px
   })
     .setPin('#stick-3')
-    // .addIndicators()
+    .addIndicators()
     .addTo(controller); // assign the scene to the controller
-
-
-
-
-
-
-
-  (function scrollEvents(){
-    console.log("SCROLL")
-    $(window).on("scroll", () => {
-      let scrollTop = window.scrollY
-      console.log(scrollTop)
-    })
-  })()
 
 }
