@@ -1,18 +1,13 @@
 .slick-prev,
 .slick-next
+    top: unset
+    bottom: 0
+    transform: translateY(25px) !important
     &::before
         color: black !important
-        font:
-            size: 4.8rem
 
-.slick-nav
-    width: 380px
-    margin: 0 auto
-    li
-        cursor: pointer
-    .slick-current
-        li
-            font:
-                weight: bold
-            text:
-                decoration: underline
+.slick-prev
+    left: 0
+
+.slick-next
+    right: 0

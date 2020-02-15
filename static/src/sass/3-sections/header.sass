@@ -1,6 +1,9 @@
 #header
-  position: fixed
-  height: 70px
+  // background: #111
+  background: transparent
+  position: absolute
+  color: #fff
+  // padding: 0 2rem
   width: 100%
 
   .col, [class*="col"]
@@ -10,9 +13,23 @@
   .mobile-only
     display: flex
     justify-content: space-between
-    .nav-toggle, .cta
+    align-items: center
+    .nav-toggle, .logo, .cta
       width: 50%
-    .nav-toggle
-      background: #fff
+      padding: 2rem 0
+      text-align: center
+    .logo
+      font-weight: bold
     .cta
-      background: blue
+      background: $red
+      color: #fff
+      padding-left: 2rem
+      padding-right: 2rem
+      text-decoration: none
+
+  .mobile-only-alternative
+    padding: 2rem      
+
+    .logo
+      font:
+        weight: bold

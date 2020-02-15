@@ -1,6 +1,6 @@
 import ScrollMagic from 'ScrollMagic'
 import 'animation.gsap'
-import 'debug.addIndicators'
+// import 'debug.addIndicators'
 import $ from  'jquery'
 
 export default function() {
@@ -13,7 +13,7 @@ export default function() {
       offset: 50 // start this scene after scrolling for 50px
   })
       .setPin('#stick-1')
-      .addIndicators()
+    //   .addIndicators()
       .addTo(controller); // assign the scene to the controller
 
   new ScrollMagic.Scene({
@@ -22,7 +22,7 @@ export default function() {
       offset: 50 // start this scene after scrolling for 50px
   })
     .setPin('#stick-2')
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller); // assign the scene to the controller
 
   new ScrollMagic.Scene({
@@ -31,7 +31,7 @@ export default function() {
       offset: 50 // start this scene after scrolling for 50px
   })
     .setPin('#stick-3')
-    .addIndicators()
+    // .addIndicators()
     .addTo(controller); // assign the scene to the controller
 
 }
