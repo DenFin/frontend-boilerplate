@@ -1,0 +1,16 @@
+html
+  font:
+      size: 62.5%
+
+body
+  color: $textColor
+  font:
+      family: $primaryFont
+      size: $baseTextSize
+      weight: 300
+  line-height: 1.5
+
+  ::-moz-selection 
+    background: transparentize($primaryColor, .8)
+  ::selection 
+    background: lighten($primaryColor, 50%)

@@ -1,0 +1,57 @@
+h1, h2, h3, h4, h5, h6,
+.text-large
+    font:
+        size: $baseTextSize
+        weight: 600
+    line-height: 1.2
+
+h1
+  font:
+    size: 3rem
+
+h2
+  font:
+    size: 2.5rem
+
+h3, h4, .text-medium
+  font:
+    size: 1.8rem
+
+// starts at 768px
+@media($tablet)
+    .text-large
+        font-size: 2.4rem
+    h1
+        font-size: $h1-TabletUp
+    h2
+        font-size: $h2-TabletUp
+    h3, .text-medium
+        font-size: 2.4rem
+    h4
+        font-size: 2rem
+
+// starts at 1024px
+@media($laptop)
+    body
+        font-size: 1.5rem
+
+    h2
+        font-size: $h2-LaptopUp
+
+// starts at 1440px    
+@media($desktop)
+    .text-large
+        font-size: 2.8rem
+
+    h1
+        font-size: $h1-DesktopUp
+    h2
+        font-size: $h2-DesktopUp
+
+// starts at 1920px
+@media($desktopL)
+    h1
+        font-size: $h1-DesktopLarge
+        margin-bottom: $margin-2
+    h2
+        font-size: $h2-DesktopLarge

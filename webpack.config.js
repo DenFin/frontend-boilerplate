@@ -14,7 +14,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'static/dist/js'),
     filename: "bundle.js",
-    publicPath: './static'
+    publicPath: './static',
+    hotUpdateChunkFilename: '../hot/hot-update.js',
+    hotUpdateMainFilename: '../hot/hot-update.json',
   },
   resolve: {
     extensions: ['.js', ".sass"],
@@ -40,20 +42,31 @@ module.exports = {
         ]
       },
       {
-          test: /.sass$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[name].css',
-                outputPath: '../css/'
-              }
-            },
-            {
-              loader: 'sass-loader'
+        test: /.sass$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].css',
+              outputPath: '../css/'
             }
-          ]
-        }
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
+      },
+      {
+        test: require.resolve('snapsvg'),
+        use: [{
+          loader: 'imports-loader?this=>window,fix=>module.exports=0'
+          }
+        ]
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      }
     ]
   },
   plugins: [ new webpack.HotModuleReplacementPlugin()]

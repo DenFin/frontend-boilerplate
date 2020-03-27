@@ -5,9 +5,93 @@
 @import "5-experimental/_experimental"
 
 
-//
-h1
-    text-transform: uppercase
+.fixed-bg
+    position: relative
 
-h2
-    color: $red
+#bg-1,
+#bg-2
+    position: relative
+    z-index: 3
+
+#image-1,
+#image-2
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+
+
+#image-1
+    background:
+        image: url("../img/_layout/bg.jpg")
+        size: cover
+        attachment: fixed
+    z-index: 1
+
+#image-2
+    background:
+        image: url("../img/_layout/bg-blur.png")
+        size: cover
+        attachment: fixed
+    z-index: 2
+    opacity: 0
+
+    &.fadeIn
+        opacity: 1
+
+#target
+    &.animate
+        .char
+            animation:
+                name: fadeInUp
+                delay: calc(250ms + (100ms * var(--char-index)))
+                duration: 250ms
+                timing-function: ease-in-out
+                fill-mode: forwards
+            transition: all 250ms ease
+            
+    .char
+        opacity: 0
+        transform: translateY(10px)
+        transition: all 250ms ease
+
+
+@keyframes fadeInUp
+    from
+        opacity: 0
+        transform: translateY(10px)
+    to
+        opacity: 1
+        transform: translateY(0)
+
+
+
+.transition-fade 
+    transition: 0.4s
+    opacity: 1
+
+html.is-animating 
+    .transition-fade 
+        opacity: 0
+
+
+#header
+    padding: $margin
+    background: #fff
+    color: #333
+    position: relative
+    z-index: 99
+
+    nav
+        ul
+            +reset-ul
+        li
+            display: inline-block
+        a
+            color: inherit
+            display: block
+            font-weight: 600
+            text-decoration: none
+            margin-bottom: 0
+            padding: 0 $margin-2
