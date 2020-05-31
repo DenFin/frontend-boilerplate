@@ -47,7 +47,7 @@
   "dependencies": {
     "expose-loader": "^0.7.5",
     "gsap": "^1.19.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery.stellar": "^0.6.2",
     "js-cookie": "^2.2.1",
     "load-google-maps-api": "^2.0.2",
