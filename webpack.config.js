@@ -27,7 +27,8 @@ module.exports = {
       "TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
       "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
       "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-      "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
+      "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
+      "jquery.stellar": path.resolve('node_modules', 'jquery.stellar/jquery.stellar.js')
     }
   },  
   module: {
@@ -66,6 +67,17 @@ module.exports = {
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        // Exposes jQuery for use outside Webpack build
+        test: require.resolve('jquery'),
+        use: [{
+            loader: 'expose-loader',
+            options: 'jQuery'
+        }, {
+            loader: 'expose-loader',
+            options: '$'
+        }]
       }
     ]
   },

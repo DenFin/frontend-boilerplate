@@ -7,7 +7,5 @@ export default function() {
     const target = document.querySelector('#target');
     const results = Splitting({ target: target, by: 'chars' });
 
-    console.log("SPLITTING")
-
 
 }

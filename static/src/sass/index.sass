@@ -45,15 +45,15 @@
         .char
             animation:
                 name: fadeInUp
-                delay: calc(250ms + (100ms * var(--char-index)))
-                duration: 250ms
+                delay: calc(25ms + (25ms * var(--char-index)))
+                duration: 100ms
                 timing-function: ease-in-out
                 fill-mode: forwards
             transition: all 250ms ease
             
     .char
         opacity: 0
-        transform: translateY(10px)
+        transform: translateY(20px)
         transition: all 250ms ease
 
 
@@ -95,3 +95,15 @@ html.is-animating
             text-decoration: none
             margin-bottom: 0
             padding: 0 $margin-2
+
+
+#parallax
+    background:
+        image: url("../img/_layout/bg.jpg")
+        size: cover
+        attachment: fixed
+    height: 100vh
+
+@media($smallDevices)
+    body
+        background: pink

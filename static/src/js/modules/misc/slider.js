@@ -1,12 +1,20 @@
 import $ from "jquery"
 import slick from "slick-carousel"
 
-export default function(){
+export default function() {
 
-    $(".slick-container").slick({
-        "arrows": true,
-        "slidesToShow": 1
+    const $slickContainer = $(".slick-container")
 
-    });
+    if ($slickContainer.length != 0) {
+        $(".slick-container").slick({
+            "arrows": true,
+            "slidesToShow": 1
+        });
+
+    } else {
+        console.error("There is no slick-container")
+    }
+
+
 
 }

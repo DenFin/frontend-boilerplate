@@ -11,6 +11,22 @@
     margin-top: $margin-2
 
 
+.shape
+  background: $red 
+  position: relative
+  &:before 
+    display: block
+    content: ""
+    width: 100%
+    padding-top: (10 / 12) * 100%
+
+  > .inner 
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+  
 
 
 @media($mobileS)
